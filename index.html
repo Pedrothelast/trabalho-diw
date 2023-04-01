@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="col-12 cabecalho">
+    <nav class="navbar navbar-expand-lg bg-light col-12 col-sm-06">
+      <div class="container-fluid ">
+        <div class="col-02 col-sm-01">
+          <a class="navbar-brand" href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        </div>
+        <div class="col-06 col-sm-03">
+          <p>Wellcome Guest</p>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search for a product,Category, Sellers or Brand" placeholder="Search"
+              aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" style="width: auto;">Search</button>
+          </form>
+        </div>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>-->
+        <div class="collapse navbar-collapse col-4 col-sm-02" id="navbarSupportedContent"
+          style="display: flex; flex-direction: column; border: solid 2px blue;">
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 30%;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Sing in |</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link |</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Register |</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Track order</a>
+            </li>
+
+          </ul>
+          <div class="row" style="display: flex; flex-direction: row; border: solid 2px red;">
+            <div class="col-06">
+              <span>Cash on Delivery | 30 Day Return</span><br>
+              <span>24/7 Custume Service 1800 00 11 22</span>
+            </div>
+            <div class="col-04"> <button>My Cart</button></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="col-12 col-sm-06" style="display: flex; flex-direction: row;">
+    <form action="index.html" class="col-04 col-sm-04" style="border: solid 2px red;">
+      <h6>Quick Find - Choose product</h6>
+      <p>Find the right product at the right price</p>
+
+      <label for="type"></label>
+      <select name="Type" id="type">
+        <option value="Tipo">Type</option>
+        <option value="Blended">Blended</option>
+        <option value="scotch whisky">scotch whisky</option>
+      </select>
+      <br>
+
+      <label for="brand"></label>
+      <select name="brand" id="brand">
+        <option value="Tipo">Brand</option>
+        <option value="Blended">Blended</option>
+        <option value="scotch whisky">scotch whisky</option>
+      </select>
+      <br>
+
+      <label for="category"></label>
+      <select name="category" id="category">
+        <option value="Tipo">Category</option>
+        <option value="Blended">Blended</option>
+        <option value="scotch whisky">scotch whisky</option>
+      </select>
+      <br>
+      <div class="col-02" style="display: flex; flex-direction: row;">
+        <p>$</p> <input type="text" value="" style="width: 40px;">
+        <p>$</p><input type="text" value="" style="width: 40px;">
+      </div>
+
+      <button class="btn-primary">Search</button>
+    </form>
+
+    <div class="col-08 col-sm-08" ">
+      <div id=" carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://source.unsplash.com/random/400x350?id=392" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/random/400x350?id=390" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://source.unsplash.com/random/400x350?id=391" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+  </main>
+
+  <section class="col-12 col-sm-12" style="display: flex; flex-direction: row; margin: auto;">
+    <div class="col-10 col-sm-10" style="display: flex; flex-direction: row;"">
+    <div class=" col-03 col-sm-03" style=" margin: auto">
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-03 col-sm-03" style=" margin: auto">
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-03 col-sm-03" style=" margin: auto">
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 12rem;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 8rem; height: auto;">
+        <div class="card-body">
+          <p class="card-title">Card title</p>
+          <p class="card-text">Lorem inpsu dolor sit amet</p>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class=" col-02 col-sm-02" style="height: 100%; border: solid 2px black;">
+      <div class="card" style="width: 14rem; height: 6rem; display: flex; flex-direction: row;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 64px; height: 64px;">
+        <div class="card-body">
+          <a href="">
+            <p class="card-title">Card title</p>
+          </a>
+          <div class="estrelas">
+            <input type="radio" id="cm_star-empty" name="fb" value="" checked />
+            <label for="cm_star-1"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-1" name="fb" value="1" />
+            <label for="cm_star-2"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-2" name="fb" value="2" />
+            <label for="cm_star-3"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-3" name="fb" value="3" />
+            <label for="cm_star-4"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-4" name="fb" value="4" />
+            <label for="cm_star-5"><i class="fa"></i></label>
+            <input type="radio" id="cm_star-5" name="fb" value="5" />
+          </div>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 14rem; height: 6rem; display: flex; flex-direction: row;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 64px; height: 64px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 14rem; height: 6rem; display: flex; flex-direction: row;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 64px; height: 64px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 14rem; height: 6rem; display: flex; flex-direction: row;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 64px; height: 64px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 14rem; height: 6rem; display: flex; flex-direction: row;">
+        <img src="img/Brown Mascot Lion Free Logo.png" class="card-img-top" alt="..."
+          style="width: 64px; height: 64px;">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+        </div>
+      </div>
+      <div class="card" style="width: 14rem; height: 6rem; display: flex; flex-direction: row;">
+        <div class="card-body">
+          <h5 class="card-title">NewsLetter</h5>
+          <p class="card-text">Sing up for Newsletter</p>
+          <input type="email">
+          <button class="btn-primary">Join Now!</button>
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer class="col-12" style="width: 100%; ">
+    <section class="col-12"
+      style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; margin: auto;">
+
+      <div class="col-03" style="display: flex; flex-direction: column;">
+        <h2>Payment methods</h2>
+        <div  class="col-12" style="display: flex; flex-direction: row;">
+          <div class="col-04" style="margin: auto;"><i class="bi bi-facebook"></i></div>
+          <div class="col-04" style="margin: auto;"><i class="bi bi-whatsapp"></i></div>
+        </div>
+        <div  class="col-12" style="display: flex; flex-direction: row;">
+          <div class="col-04" style="margin: auto;"><i class="bi bi-facebook"></i></div>
+          <div class="col-04" style="margin: auto;"><i class="bi bi-whatsapp"></i></div>
+        </div>
+        <div  class="col-12" style="display: flex; flex-direction: row;">
+          <div class="col-04" style="margin: auto;"><i class="bi bi-facebook"></i></div>
+          <div class="col-04" style="margin: auto;"><i class="bi bi-whatsapp"></i></div>
+        </div>
+      </div>
+      <div class="col-03" style="display: flex; flex-direction: column;">
+        <h2>Quick Links</h2>
+        <a href="">Help</a>
+        <a href="">Shiping policy</a>
+        <a href="">Cancels & Returns</a>
+        <a href="">FAQ</a>
+        <a href="">Privacy policy</a>
+        <a href="">Disclaymer</a>
+      </div>
+      <div class="col-03" style="display: flex; flex-direction: column;">
+        <h2>Let's be social</h2>
+        <div  class="col-12" style="display: flex; flex-direction: row;">
+          <div class="col-04" style="margin: auto;"><i class="bi bi-facebook"></i></div>
+          <div class="col-04" style="margin: auto;"><i class="bi bi-whatsapp"></i></div>
+          <div class="col-04" style="margin: auto;"><i class="bi bi-twitter"></i></div>
+        </div>
+
+      </div>
+      <div class="col-03" style="display: flex; flex-direction: column;">
+        <h2>Contact us</h2>
+        <span>Adress on line</span>
+        <span>Street NO</span>
+        <span>Place</span>
+        <a href="">info@company.com</a>
+        <span>1800 4400 22</span>
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
