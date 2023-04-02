@@ -6,10 +6,76 @@ body {
   .cabecalho{
     background: white;
   }
-.logo{
-    
+.card1{
+  margin: 40px;
 }
-  .items-head{
+@media (min-width: 575.98px) {
+  .card1{
+display: flex;
+flex-direction: column;
+margin: 20px;
+}
+.cards{
+  display: flex;
+flex-direction: column;
+}
+}
+.card-lateral{
+  display: flex;
+flex-direction: column;
+}
+@media (min-width: 767.98px) {
+  .card1{
+display: flex;
+flex-direction: row;
+margin: 20px;
+}
+.cards{
+  display: flex;
+flex-direction: row;
+}
+}
+.card-lateral{
+  display: flex;
+flex-direction: column;
+}
+@media (min-width: 991.98px) {
+  .card1{
+display: flex;
+flex-direction: row;
+margin: 20px;
+}
+.cards{
+  display: flex;
+flex-direction: row;
+}
+.card-lateral{
+  display: flex;
+flex-direction: column;
+}
+}
+@media (max-width: 575.98px) {
+
+  .card-lateral{
+    display: flex;
+  flex-direction: column;
+  }
+  }
+@media (max-width: 767.98px) {
+
+  .card-lateral{
+    display: flex;
+  flex-direction: column;
+  }
+  }
+@media (max-width: 991.98px) {
+
+.card-lateral{
+  display: flex;
+flex-direction: column;
+}
+}
+.items-head{
     display: flex;
     flex-direction: row;
     text-decoration-line: none
