@@ -198,76 +198,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
     integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
     crossorigin="anonymous"></script>
-    <!-- <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      setupSearch();
-      performSearch();
-    });
-
-    function setupSearch() {
-      var searchButton = document.getElementById('search-button');
-      searchButton.addEventListener('click', performSearch);
-    }
-
-    function performSearch(event) {
-      if (event) {
-        event.preventDefault(); // Evita o comportamento padrão do formulário
-      }
-
-      var query = getSearchQueryFromURL();
-      var decodedQuery = decodeURIComponent(query);
-
-      // Faz uma chamada à API de pesquisa com o termo 'query'
-      var apiUrl = 'https://diwserver.vps.webdock.cloud/products?query=' + decodedQuery;
-
-      // Faz uma solicitação XMLHTTPRequest para a API
-      loadXMLDoc(apiUrl, function(response) {
-        var searchResults = JSON.parse(response);
-        displaySearchResults(searchResults);
-      });
-    }
-
-    function getSearchQueryFromURL() {
-      var urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get('query');
-    }
-
-    function loadXMLDoc(url, callback) {
-      var xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-          callback(xmlhttp.responseText);
-        }
-      };
-      xmlhttp.open("GET", url, true);
-      xmlhttp.send();
-    }
-
-    function displaySearchResults(searchResults) {
-      var searchResultsElement = document.getElementById('search-results');
-
-      // Limpa o conteúdo atual
-      searchResultsElement.innerHTML = '';
-
-      if (searchResults.products.length === 0) {
-        // Nenhum resultado encontrado
-        searchResultsElement.innerHTML = '<p>Nenhum resultado encontrado.</p>';
-      } else {
-        // Exibe cada produto encontrado
-        searchResults.products.forEach(function(product) {
-          var productHTML = `
-            <div>
-              <h2>${product.title}</h2>
-              <img src="${product.image}" alt="Imagem do produto">
-              <p>Preço: R$ ${product.price.toFixed(2)}</p>
-              <p>Descrição: ${product.description}</p>
-            </div>
-          `;
-          searchResultsElement.innerHTML += productHTML;
-        });
-      }
-    }
-  </script> -->
+  
 
   <script>
     window.addEventListener('load', function() {
@@ -460,7 +391,7 @@
     } else {
       searchResults.products.forEach(function(product) {
         var productHTML = `
-          <div class="item" onclick="showProductDetails(${product.id})>
+          <div class="item" onclick="showProductDetails(${product.id})">
             <h2>${product.title}</h2>
             <img class="img-card" src="${product.image}" alt="Imagem do produto">
             <p>Preço: R$ ${product.price.toFixed(2)}</p>
