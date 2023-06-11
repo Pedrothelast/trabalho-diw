@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Detalhes do Produto</title>
+  <!-- Estilos CSS -->
+  <style>
+    .product-details {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+    
+    .product-details img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    
+    .product-details p {
+      margin-bottom: 10px;
+    }
+    .results-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card-pesquisa {
+        display: flex;
+        flex-direction: row;
+      width: 60%;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card-img-pesquisa {
+      width: 75%;
+      height: 200px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+  
+    .card-body-pesquisa {
+      padding: 10px;
+    }
+  
+    .card-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  
+    .card-text {
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    .product {
+      margin-bottom: 20px;
+    }
+    
+    .product img {
+      width: 100px;
+      height: auto;
+      margin-right: 10px;
+    }
+    
+    .product h3 {
+      margin-top: 0;
+    }
+    
+    .product p {
+      margin-bottom: 5px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="app.js"></script>
+  
+</head>
+<body>
+  <header class="cabecalho">
+    <header class="cabecalho">
+        <nav class="navbar navbar-expand-lg col-12 ">
+          <div class="container-fluid ">
+            <div class="col-02 col-sm-01">
+              <a class="navbar-brand" href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
+            </div>
+            <div class="col-06 item-m">
+              <p>Wellcome Guest</p>
+              <form class="d-flex" role="search">
+                <input id="search-input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    
+                <button id="search-button" class="btn btn-success" type="submit" style="width: auto;" onclick="setupSearch()">Search</button>
+              </form>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  item-m2" id="navbarSupportedContent">
+    
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 30%;">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Sing in |</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link |</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Register |</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Track order</a>
+                </li>
+    
+              </ul>
+              <div class="col-12" style="display: flex; flex-direction: row; justify-content: center;">
+                <div class="col-06 item-m3">
+                  <span>Cash on Delivery | 30 Day Return</span><br>
+                  <span>24/7 Custume Service 1800 00 11 22</span>
+                </div>
+                <div class="col-04"><button type="button" class="btn btn-primary position-relative" style="margin-left: 3px;">
+                  Inbox
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button></div>
+                
+              </div>
+            </div>
+          </div>
+          </div>
+        </nav>
+      </header>
+  </header>
+  <section id="search-results" class="results-section"></section>
+
+  
+
+  <footer class="col-12 rodape" style="width: 100%; ">
+    <section class=" foot-conf">
+
+      <div class="pay">
+        <h2>Payment methods</h2>
+        <div class="col-12" style="display: flex; flex-direction: row;">
+          <div class="col-06" ><img src="img/mastercard.png" alt=""></div>
+          <div class="col-06" style="margin: auto;"><img src="img/visa.png" alt=""></div>
+        </div>
+        <div class="col-12" style="display: flex; flex-direction: row;">
+          <div class="col-12" style="margin: auto;"><img src="img/pg1.png" alt=""></i></div>
+        </div>
+        
+      </div>
+      <div class="quick">
+        <h2>Quick Links</h2>
+        <a href="">Help</a>
+        <a href="">Shiping policy</a>
+        <a href="">Cancels & Returns</a>
+        <a href="">FAQ</a>
+        <a href="">Privacy policy</a>
+        <a href="">Disclaymer</a>
+      </div>
+      <div class="social">
+        <h2>Let's be social</h2>
+        <div style="display: flex; flex-direction: row;">
+          <div  style="margin: auto;"><i class="bi bi-facebook"></i></div>
+          <div style="margin: auto;"><i class="bi bi-whatsapp"></i></div>
+          <div  style="margin: auto;"><i class="bi bi-twitter"></i></div>
+        </div>
+
+      </div>
+      <div class="contact">
+        <h2>Contact us</h2>
+        <span>Pedro Henrique Macena Rocha</span>
+        <span>Analise</span>
+        <span>e Desenvolvimento de Sistema</span>
+        <span>N°:800045</span>
+      </div>
+    </section>
+    <div class="col-12 copi">2023 © redking.com </div>
+  </footer>
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+    <!-- <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      setupSearch();
+      performSearch();
+    });
+
+    function setupSearch() {
+      var searchButton = document.getElementById('search-button');
+      searchButton.addEventListener('click', performSearch);
+    }
+
+    function performSearch(event) {
+      if (event) {
+        event.preventDefault(); // Evita o comportamento padrão do formulário
+      }
+
+      var query = getSearchQueryFromURL();
+      var decodedQuery = decodeURIComponent(query);
+
+      // Faz uma chamada à API de pesquisa com o termo 'query'
+      var apiUrl = 'https://diwserver.vps.webdock.cloud/products?query=' + decodedQuery;
+
+      // Faz uma solicitação XMLHTTPRequest para a API
+      loadXMLDoc(apiUrl, function(response) {
+        var searchResults = JSON.parse(response);
+        displaySearchResults(searchResults);
+      });
+    }
+
+    function getSearchQueryFromURL() {
+      var urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('query');
+    }
+
+    function loadXMLDoc(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+          callback(xmlhttp.responseText);
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    }
+
+    function displaySearchResults(searchResults) {
+      var searchResultsElement = document.getElementById('search-results');
+
+      // Limpa o conteúdo atual
+      searchResultsElement.innerHTML = '';
+
+      if (searchResults.products.length === 0) {
+        // Nenhum resultado encontrado
+        searchResultsElement.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+      } else {
+        // Exibe cada produto encontrado
+        searchResults.products.forEach(function(product) {
+          var productHTML = `
+            <div>
+              <h2>${product.title}</h2>
+              <img src="${product.image}" alt="Imagem do produto">
+              <p>Preço: R$ ${product.price.toFixed(2)}</p>
+              <p>Descrição: ${product.description}</p>
+            </div>
+          `;
+          searchResultsElement.innerHTML += productHTML;
+        });
+      }
+    }
+  </script> -->
+
+  <script>
+    window.addEventListener('load', function() {
+   setupSearch1();
+ });
+ 
+   function setupSearch1() {
+   var searchButton = document.getElementById('search-button');
+   searchButton.addEventListener('click', performSearch1);
+ }
+ 
+ function performSearch1(event) {
+   event.preventDefault(); // Evita o comportamento padrão do formulário
+ 
+   var searchInput = document.getElementById('search-input');
+   var query = searchInput.value.trim(); // Remove espaços em branco no início e no fim
+   var encodedQuery = encodeURIComponent(query);
+ 
+   // Redirecionar o usuário para a página de pesquisa com o termo de busca na URL
+   window.location.href = 'pagina_pesquisa.html?query=' + encodedQuery;
+ }
+   </script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    setupSearch();
+    performSearch();
+  });
+
+  function setupSearch() {
+    var searchButton = document.getElementById('search-button');
+    searchButton.addEventListener('click', performSearch);
+  }
+
+  function performSearch(event) {
+    if (event) {
+      event.preventDefault(); // Evita o comportamento padrão do formulário
+    }
+
+    var query = getSearchQueryFromURL();
+    var decodedQuery = decodeURIComponent(query);
+
+    // Faz uma chamada à API de pesquisa com o termo 'query'
+    var apiUrl = 'https://diwserver.vps.webdock.cloud/products';
+
+    // Faz uma solicitação XMLHTTPRequest para a API
+    loadXMLDoc(apiUrl, function(response) {
+      var searchResults = JSON.parse(response);
+      var filteredResults = filterProducts(searchResults, decodedQuery);
+      displaySearchResults(filteredResults);
+    });
+  }
+
+  function getSearchQueryFromURL() {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('query');
+  }
+
+  function loadXMLDoc(url, callback) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        callback(xmlhttp.responseText);
+      }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+  }
+
+  function filterProducts(searchResults, query) {
+    if (!searchResults || !searchResults.products) {
+      return [];
+    }
+
+    var filteredProducts = searchResults.products.filter(function(product) {
+      var title = product.title.toLowerCase();
+      var queryElements = query.toLowerCase().split(':');
+      return queryElements.some(function(element) {
+        return title.includes(element.trim());
+      });
+    });
+
+    return { products: filteredProducts };
+  }
+
+  function displaySearchResults(searchResults) {
+    var searchResultsElement = document.getElementById('search-results');
+
+    // Limpa o conteúdo atual
+    searchResultsElement.innerHTML = '';
+
+    if (searchResults.products.length === 0) {
+      // Nenhum resultado encontrado
+      searchResultsElement.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+    } else {
+      // Exibe cada produto encontrado
+      searchResults.products.forEach(function(product) {
+        var productHTML = `
+        <div class="item" onclick="showProductDetails(${product.id})"> 
+            <h2>${product.title}</h2>
+            <img class="img-card" src="${product.image}" alt="Imagem do produto">
+            <p>Preço: R$ ${product.price.toFixed(2)}</p>
+            <p class="title-card">Descrição: ${product.description}</p>
+          </div>
+        `;
+        searchResultsElement.innerHTML += productHTML;
+      });
+    }
+  }
+  function showProductDetails(productId) {
+  // Redirecionar o usuário para a página de detalhes do produto
+  console.log("Product")
+  window.location.href = 'pagina_detalhes.html?id=' + productId;
+}
+</script> 
+      
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    loadCategories();
+    performSearch2();
+  });
+
+  function loadCategories() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://diwserver.vps.webdock.cloud/products/categories', true);
+
+    xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 400) {
+        var categories = JSON.parse(xhr.responseText);
+
+        var categorySelect = document.getElementById('category');
+
+        categorySelect.innerHTML = '';
+
+        categories.forEach(function(category) {
+          var option = document.createElement('option');
+          option.value = category;
+          option.textContent = category;
+          categorySelect.appendChild(option);
+        });
+      }
+    };
+
+    xhr.onerror = function() {
+      console.log('Erro na requisição');
+    };
+
+    xhr.send();
+  }
+
+  function performSearch2() {
+    var category = getCategoryFromURL();
+
+    if (category) {
+      var apiUrl = 'https://diwserver.vps.webdock.cloud/products?category=' + encodeURIComponent(category);
+
+      loadXMLDoc(apiUrl, function(response) {
+        var searchResults = JSON.parse(response);
+        displaySearchResults2(searchResults);
+      });
+    } else {
+      var searchResultsElement = document.getElementById('search-results');
+      searchResultsElement.innerHTML = '<p>Categoria não encontrada.</p>';
+    }
+  }
+
+  function getCategoryFromURL() {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('category');
+  }
+
+  function loadXMLDoc2(url, callback) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+        callback(xmlhttp.responseText);
+      }
+    };
+    xmlhttp.open('GET', url, true);
+    xmlhttp.send();
+  }
+
+  function displaySearchResults2(searchResults) {
+    var searchResultsElement = document.getElementById('search-results');
+
+    searchResultsElement.innerHTML = '';
+
+    if (searchResults.products.length === 0) {
+      searchResultsElement.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+    } else {
+      searchResults.products.forEach(function(product) {
+        var productHTML = `
+          <div class="item" onclick="showProductDetails(${product.id})>
+            <h2>${product.title}</h2>
+            <img class="img-card" src="${product.image}" alt="Imagem do produto">
+            <p>Preço: R$ ${product.price.toFixed(2)}</p>
+            <p class="title-card">Descrição: ${product.description}</p>
+          </div>
+        `;
+        searchResultsElement.innerHTML += productHTML;
+      });
+    }
+  }
+  function showProductDetails(productId) {
+  // Redirecionar o usuário para a página de detalhes do produto
+  console.log("Product")
+  window.location.href = 'pagina_detalhes.html?id=' + productId;
+}
+</script>
+
+ 
+</body>
+</html>

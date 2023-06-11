@@ -77,7 +77,7 @@ body {
 }
 
 .lab {
-  width: 150px;
+  width: 90%;
 }
 
 /*slide*/
@@ -85,7 +85,7 @@ body {
 .principal {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 99%;
   align-items: center;
   justify-content: space-around;
 
@@ -106,6 +106,8 @@ body {
 .img-card {
   width: 180px;
   height: 120px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 @media screen and (max-width:720px) {
@@ -117,7 +119,9 @@ body {
     justify-content: space-around;
 
   }
-
+.cards{
+  align-items: center;
+}
   .filtro {
     display: flex;
     width: 70%;
@@ -169,9 +173,17 @@ body {
 }
 
 .item {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.title-card{
+  text-wrap: balance;
+  margin-right: 10px;
 }
 
 .item4 {
@@ -222,10 +234,10 @@ body {
 
     }
 
-    .item {
+    /* .item {
       display: block;
       padding: 30px;
-    }
+    } */
 
     .item:nth-child(9) {
       display: none;
@@ -264,3 +276,11 @@ body {
     }
 
   }
+  .card-pesquisa-top{
+    display: contents;
+  }
+
+  .d-block{
+    border-radius: 10px;
+  }
+  
